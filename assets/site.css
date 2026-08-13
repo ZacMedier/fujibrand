@@ -428,6 +428,10 @@ p + p { margin-top: 14px; }
 
 /* split (image + text) */
 .split { display: grid; gap: clamp(24px, 4vw, 48px); align-items: center; }
+.split--stretch { align-items: stretch; }
+@media (min-width: 900px) {
+  .split--stretch .map-embed { aspect-ratio: auto; height: 100%; min-height: 320px; }
+}
 @media (min-width: 900px) { .split { grid-template-columns: 1fr 1fr; } .split--wide { grid-template-columns: 1.1fr .9fr; } }
 
 .split-media img {
