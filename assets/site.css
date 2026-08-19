@@ -395,14 +395,16 @@ p + p { margin-top: 14px; }
 
 .tile-media {
   height: clamp(150px, 24vw, 200px);
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 18px;
+  min-height: 0;
   overflow: hidden;
   background: linear-gradient(160deg, #f7f9fd 0%, #eef2f9 100%);
   border-bottom: 1px solid var(--line);
 }
-.tile-media img { max-height: 100%; max-width: 100%; width: auto; object-fit: contain; mix-blend-mode: multiply; }
+.tile-media img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; mix-blend-mode: multiply; }
 
 .tile-body { padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 6px; }
 .tile-body h3 { font-size: 17px; }
